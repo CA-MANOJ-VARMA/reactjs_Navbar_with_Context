@@ -1,0 +1,6 @@
+/* Write your CSS here */
+.css-homeimage-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

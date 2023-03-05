@@ -1,0 +1,25 @@
+/* Write your CSS here */
+.css-navabar-bg-container {
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.css-navbar-home-about-container {
+  display: flex;
+  gap: 20px;
+}
+
+.css-logo-image-itself {
+  width: 30px;
+}
+
+.css-themetoggle-button-itself {
+  background-color: transparent;
+  border-width: 0;
+}
+
+.css-themetoggle-button-itself:hover {
+  cursor: pointer;
+}
