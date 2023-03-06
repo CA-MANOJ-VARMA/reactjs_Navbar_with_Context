@@ -11,41 +11,45 @@ const Navbar = () => (
         ? 'https://assets.ccbp.in/frontend/react-js/website-logo-dark-theme-img.png'
         : 'https://assets.ccbp.in/frontend/react-js/website-logo-light-theme-img.png'
 
-      const themeLogo = isDarkTheme
-        ? 'https://assets.ccbp.in/frontend/react-js/light-theme-img.png'
-        : 'https://assets.ccbp.in/frontend/react-js/dark-theme-img.png'
-
       return (
         <ul className="css-navabar-bg-container">
-          <li>
+          <li key="website logo">
             <img
               src={websiteLogo}
               alt="website logo"
               className="css-logo-image-itself"
             />
           </li>
-          <li>
+          <li key="Home_About">
             <div className="css-navbar-home-about-container">
-              <Link to="/">
-                <p>Home</p>
+              <Link to="/" className="css-link-property">
+                Home
               </Link>
-              <Link to="/about">
-                <p>About</p>
+              <Link to="/about" className="css-link-property">
+                About
               </Link>
             </div>
           </li>
-          <li>
+          <li key="theme">
             <button
               type="button"
               className="css-themetoggle-button-itself"
               onClick={toggleTheme}
               data-testid="theme"
             >
-              <img
-                src={themeLogo}
-                alt="theme"
-                className="css-logo-image-itself"
-              />
+              {isDarkTheme ? (
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/light-theme-img.png"
+                  className="css-logo-image-itself"
+                  alt="theme"
+                />
+              ) : (
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/dark-theme-img.png"
+                  className="css-logo-image-itself"
+                  alt="theme"
+                />
+              )}
             </button>
           </li>
         </ul>

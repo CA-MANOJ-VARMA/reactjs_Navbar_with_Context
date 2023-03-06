@@ -15,10 +15,9 @@ class App extends Component {
   state = {isDarkTheme: false}
 
   toggleTheme = () => {
-    const {isDarkTheme} = this.state
-    this.setState({
-      isDarkTheme: !isDarkTheme,
-    })
+    this.setState(prevState => ({
+      isDarkTheme: !prevState.isDarkTheme,
+    }))
   }
 
   render() {
@@ -27,14 +26,14 @@ class App extends Component {
       <ThemeContext.Provider
         value={{isDarkTheme, toggleTheme: this.toggleTheme}}
       >
-        <>
+        <div className={`${isDarkTheme ? 'css-bg-text-color' : ''}`}>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
             <Route component={NotFound} />
           </Switch>
-        </>
+        </div>
       </ThemeContext.Provider>
     )
   }

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -9,4 +10,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.css-bg-text-color {
+  color: white;
+  background-color: #000000;
+  margin: 0;
+  height: 100vh;
 }

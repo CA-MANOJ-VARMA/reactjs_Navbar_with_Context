@@ -6,14 +6,23 @@ const Home = () => (
   <ThemeContext.Consumer>
     {value => {
       const {isDarkTheme} = value
-      const homeLogo = isDarkTheme
-        ? 'https://assets.ccbp.in/frontend/react-js/home-dark-img.png'
-        : 'https://assets.ccbp.in/frontend/react-js/home-light-img.png'
 
       return (
         <>
           <div className="css-homeimage-container">
-            <img src={homeLogo} alt="home" className="css-home-image-itself" />
+            {isDarkTheme ? (
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/home-dark-img.png"
+                alt="home"
+                className="css-home-image-itself"
+              />
+            ) : (
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/home-light-img.png"
+                alt="home"
+                className="css-home-image-itself"
+              />
+            )}
             <h1>Home</h1>
           </div>
         </>

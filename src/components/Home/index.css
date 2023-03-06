@@ -1,6 +1,7 @@
 /* Write your CSS here */
-.css-homeimage-container{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.css-homeimage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -23,3 +23,7 @@
 .css-themetoggle-button-itself:hover {
   cursor: pointer;
 }
+
+.css-link-property {
+  text-decoration: none;
+}
